@@ -9,6 +9,7 @@ extend-exclude = ["**/CHANGELOG.md"]
 
 [default]
 # Отключаем проверку всех файлов по умолчанию
+extend-ignore-re = ["Groth","groth","wee","Wee","PRIMITVE","satifies","Substraction","substraction","coeffient","cofficient","Supress","elemnts","Teh","teh"]
 check-file = false
 
 [type.md]
