@@ -1,5 +1,18 @@
+#[default]
+#extend-ignore-re = ["Groth","groth","wee","Wee","PRIMITVE","satifies","Substraction","substraction","coeffient","cofficient","Supress","elemnts","Teh","teh"]
+#files = ["!*.lock", "!target/*"]
+#exclude = ["*", "!*.md"]
+
+[files]
+# Игнорируем файл changelog.md
+extend-exclude = ["changelog.md"]
+
 [default]
-extend-ignore-re = ["Groth","groth","wee","Wee","PRIMITVE","satifies","Substraction","substraction","coeffient","cofficient","Supress","elemnts","Teh","teh"]
-files = ["!*.lock", "!target/*"]
-exclude = ["*", "!*.md"]
+# Отключаем проверку всех файлов по умолчанию
+check-file = false
+
+[type.md]
+# Включаем проверку содержимого файлов с расширением .md
+extend-glob = ["*.md"]
+check-file = true
 
