@@ -5,7 +5,7 @@
 
 [files]
 # Игнорируем файл changelog.md
-extend-exclude = ["changelog.md"]
+extend-exclude = ["**/CHANGELOG.md"]
 
 [default]
 # Отключаем проверку всех файлов по умолчанию
