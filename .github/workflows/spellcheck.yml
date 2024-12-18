@@ -1,0 +1,20 @@
+name: Spell Check with Typos
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Typos
+        run: curl -sSL https://install.crate.io/typos | bash
+
+      - name: Run Typos
+        run: typos
