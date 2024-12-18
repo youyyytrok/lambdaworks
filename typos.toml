@@ -1,3 +1,3 @@
 [default]
-extend-ignore-re = []
+extend-ignore-re = ["groth","wee"]
 files = ["!*.lock", "!target/*"]
