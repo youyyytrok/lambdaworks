@@ -1,16 +1,31 @@
-name: Spellcheck
+name: Spell Check with Typos
 
 on:
+  push:
+    branches:
+      - ci-typos
   pull_request:
 
 jobs:
-  find-typos:
+  spellcheck:
     runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
 
-    - name: Check spelling
-      uses: crate-ci/typos@master
-      with:
-        config: .typos.toml
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Typos from GitHub
+        run: |
+          wget https://github.com/crate-ci/typos/releases/download/v1.16.6/typos-v1.16.6-x86_64-unknown-linux-musl.tar.gz
+          tar -xzf typos-v1.16.6-x86_64-unknown-linux-musl.tar.gz
+          sudo mv typos /usr/local/bin/
+
+      - name: Verify Installation
+        run: typos --version
+
+      - name: Run Typos
+        run: typos
+
+      - name: Show Report
+        if: failure()
+        run: echo "Typos check failed. Please fix the errors."
