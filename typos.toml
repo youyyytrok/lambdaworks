@@ -1,3 +1,3 @@
 [default]
-extend-ignore-re = ["Groth*","groth*","wee","PRIMITVE","satifies","Substraction","Supress","elemnts"]
-files = ["!*.lock", "!target/*"]
+extend-ignore-re = ["Groth","groth","wee","Wee","PRIMITVE","satifies","Substraction","Supress","elemnts"]
+files = ["!*.lock", "!target/*","./doc/CHANGELOG.md"]
