@@ -1,3 +1,4 @@
 [default]
 extend-ignore-re = ["Groth","groth","wee","Wee","PRIMITVE","satifies","Substraction","substraction","coeffient","cofficient","Supress","elemnts","Teh"]
-files = ["!*.lock", "!target/*","!doc/CHANGELOG.md"]
+files = ["!*.lock", "!target/*"]
+extend-glob = ["!doc/CHANGELOG.md"]
