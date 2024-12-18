@@ -1,0 +1,3 @@
+[default]
+extend-ignore-re = []
+files = ["!*.lock", "!target/*"]
