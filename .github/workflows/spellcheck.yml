@@ -2,7 +2,7 @@ name: Spell Check with Typos
 
 on:
   push:
-    branches: [main]
+    branches: [ci-typos]
   pull_request:
 
 jobs:
